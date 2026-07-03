@@ -5,9 +5,9 @@ const THEME_KEY = 'helun-theme';
 export default function useTheme() {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem(THEME_KEY) || 'light';
+      return localStorage.getItem(THEME_KEY) || 'dark';
     } catch {
-      return 'light';
+      return 'dark';
     }
   });
 

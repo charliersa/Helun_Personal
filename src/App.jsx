@@ -1,5 +1,6 @@
 import useTheme from './hooks/useTheme.js';
 import useGallery from './hooks/useGallery.js';
+import useAdmin from './hooks/useAdmin.js';
 import Background from './components/Background.jsx';
 import Header from './components/Header.jsx';
 import About from './components/About.jsx';
@@ -13,11 +14,12 @@ import Footer from './components/Footer.jsx';
 export default function App() {
   const { theme, toggleTheme } = useTheme();
   const gallery = useGallery();
+  const { isAdmin, lockAdmin } = useAdmin();
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative', overflowX: 'clip' }}>
       <Background />
-      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <Header theme={theme} onToggleTheme={toggleTheme} isAdmin={isAdmin} onLockAdmin={lockAdmin} />
 
       <main className="main-wrap" style={{ position: 'relative', zIndex: 1, maxWidth: 1240, margin: '0 auto', padding: '64px 40px 0' }}>
         <About />
@@ -27,11 +29,11 @@ export default function App() {
             <ProgramList />
             <Career />
           </div>
-          <VScrollAside />
+          <VScrollAside isAdmin={isAdmin} />
         </div>
 
         <Learning />
-        <Gallery {...gallery} />
+        <Gallery {...gallery} isAdmin={isAdmin} />
         <Footer />
       </main>
     </div>

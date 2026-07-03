@@ -3,7 +3,7 @@ import { navItems } from '../data/site.js';
 
 const LOGO = 'https://res.cloudinary.com/dbiirpmpy/image/upload/v1776602970/helun/icon/LOGO.png';
 
-export default function Header({ theme, onToggleTheme }) {
+export default function Header({ theme, onToggleTheme, isAdmin, onLockAdmin }) {
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 50, backdropFilter: 'blur(14px)', background: 'linear-gradient(180deg,var(--header-bg1),var(--header-bg2))', borderBottom: '1px solid var(--border)' }}>
       <div className="hdr-bar" style={{ maxWidth: 1240, margin: '0 auto', padding: '18px 40px', display: 'flex', alignItems: 'center', gap: 26 }}>
@@ -38,6 +38,17 @@ export default function Header({ theme, onToggleTheme }) {
           >
             {theme === 'dark' ? '☀' : '☾'}
           </Hoverable>
+          {isAdmin && (
+            <Hoverable
+              as="button"
+              onClick={onLockAdmin}
+              title="登出管理模式"
+              style={{ all: 'unset', cursor: 'pointer', marginLeft: 6, padding: '0 14px', height: 42, display: 'grid', placeItems: 'center', borderRadius: 100, border: '1px solid var(--accent)', color: 'var(--accent)', fontFamily: "'Space Mono',monospace", fontSize: 12, letterSpacing: '.06em', transition: '.25s' }}
+              hoverStyle={{ background: 'var(--accent)', color: '#0B0B0D' }}
+            >
+              管理中 · 登出
+            </Hoverable>
+          )}
         </nav>
       </div>
     </header>

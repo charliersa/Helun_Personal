@@ -167,7 +167,7 @@ export const socials = [
   },
   {
     "label": "FACEBOOK",
-    "href": "#"
+    "href": "https://www.facebook.com/dgnpag.dongdong"
   },
   {
     "label": "EMAIL",
@@ -590,15 +590,55 @@ export const defaultModels = {
 };
 
 export const defaultCoat = {
-  "2026": []
+  "2026": [
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744593/helun/Painting3D/Painting3D_11.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744591/helun/Painting3D/Painting3D_24.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744590/helun/Painting3D/Painting3D_13.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744585/helun/Painting3D/Painting3D_12.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744579/helun/Painting3D/Painting3D_8.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744577/helun/Painting3D/Painting3D_23.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744574/helun/Painting3D/Painting3D_22.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744571/helun/Painting3D/Painting3D_21.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744568/helun/Painting3D/Painting3D_20.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744566/helun/Painting3D/Painting3D_19.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744561/helun/Painting3D/Painting3D_18.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744560/helun/Painting3D/Painting3D_16.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744559/helun/Painting3D/Painting3D_17.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744554/helun/Painting3D/Painting3D_14.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744554/helun/Painting3D/Painting3D_15.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744550/helun/Painting3D/Painting3D_10.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744547/helun/Painting3D/Painting3D_9.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744547/helun/Painting3D/Painting3D_6.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744545/helun/Painting3D/Painting3D_7.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744541/helun/Painting3D/Painting3D_5.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744541/helun/Painting3D/Painting3D_1.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744539/helun/Painting3D/Painting3D_4.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744538/helun/Painting3D/Painting3D_3.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1782744537/helun/Painting3D/Painting3D_2.jpg"
+  ]
 };
 
 export const defaultPrint = {
-  "2026": []
+  "2026": [
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285457/helun/printing/printing_8.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285457/helun/printing/printing_3.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285456/helun/printing/printing_7.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285455/helun/printing/printing_5.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285455/helun/printing/printing_6.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285454/helun/printing/printing_4.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285452/helun/printing/printing_2.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1772285451/helun/printing/printing_1.jpg"
+  ]
 };
 
 export const defaultComposite = {
-  "2026": []
+  "2026": [
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1776002851/helun/Photomix/mix_5.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1776002850/helun/Photomix/mix_4.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1776002848/helun/Photomix/mix_3.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1776002847/helun/Photomix/mix_2.jpg",
+    "https://res.cloudinary.com/dbiirpmpy/image/upload/v1776002846/helun/Photomix/mix_1.jpg"
+  ]
 };
 
 export const defaultTrad = {

@@ -6,7 +6,7 @@ import { parseCollection } from '../utils/collection.js';
 
 const pad2 = (n) => String(n).padStart(2, '0');
 
-export default function Gallery({ data, addImages, removeImage, addFiles }) {
+export default function Gallery({ data, addImages, removeImage, addFiles, isAdmin }) {
   const [activeCat, setActiveCat] = useState(null);
   const [catYear, setCatYear] = useState(initialCatYear);
   const [lightbox, setLightbox] = useState(null);
@@ -38,7 +38,7 @@ export default function Gallery({ data, addImages, removeImage, addFiles }) {
     const g = data[activeCat] || {};
     const activeYear = catYear[activeCat];
     const maxYear = meta.years[0];
-    const canAdd = activeYear === maxYear;
+    const canAdd = activeYear === maxYear && isAdmin;
     const activeTotal = meta.years.reduce((n, y) => n + (g[y] || []).length, 0);
 
     const flatItems = (g[activeYear] || []).map((src, i) => ({
@@ -188,15 +188,17 @@ export default function Gallery({ data, addImages, removeImage, addFiles }) {
                     hoverStyle={{ transform: 'translateY(-5px)' }}
                   >
                     <img src={p.src} alt="作品" loading="lazy" onClick={() => setLightbox(p.src)} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', cursor: 'zoom-in' }} />
-                    <Hoverable
-                      as="button"
-                      onClick={() => removeImage(activeCat, detail.activeYear, p.originalIndex)}
-                      title="移除"
-                      style={{ all: 'unset', cursor: 'pointer', position: 'absolute', top: 9, right: 9, width: 30, height: 30, display: 'grid', placeItems: 'center', borderRadius: '50%', background: 'rgba(0,0,0,.55)', color: '#fff', fontSize: 14, backdropFilter: 'blur(4px)', transition: '.2s' }}
-                      hoverStyle={{ background: '#E0504A' }}
-                    >
-                      ✕
-                    </Hoverable>
+                    {isAdmin && (
+                      <Hoverable
+                        as="button"
+                        onClick={() => removeImage(activeCat, detail.activeYear, p.originalIndex)}
+                        title="移除"
+                        style={{ all: 'unset', cursor: 'pointer', position: 'absolute', top: 9, right: 9, width: 30, height: 30, display: 'grid', placeItems: 'center', borderRadius: '50%', background: 'rgba(0,0,0,.55)', color: '#fff', fontSize: 14, backdropFilter: 'blur(4px)', transition: '.2s' }}
+                        hoverStyle={{ background: '#E0504A' }}
+                      >
+                        ✕
+                      </Hoverable>
+                    )}
                     <span style={{ position: 'absolute', left: 10, bottom: 10, fontFamily: "'Space Mono',monospace", fontSize: 10, letterSpacing: '.06em', color: '#fff', background: 'rgba(0,0,0,.5)', padding: '3px 8px', borderRadius: 6, backdropFilter: 'blur(4px)', pointerEvents: 'none' }}>{p.tag}</span>
                   </Hoverable>
                 ))}
