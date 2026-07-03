@@ -190,6 +190,15 @@ export const catMeta = {
 
 export const rawPrograms = [
   {
+    "name": "台南匹克球中毒俱樂網",
+    "desc": "Tainan-Pickle-Poisoning-Club-Website",
+    "stack": "HTML",
+    "cat": "web",
+    "status": "Public",
+    "dot": "#E34C26",
+    "url": "https://charliersa.github.io/Tainan-Pickle-Poisoning-Club-Website/"
+  },
+  {
     "name": "設計群專一",
     "desc": "Design-group-test",
     "stack": "HTML",
