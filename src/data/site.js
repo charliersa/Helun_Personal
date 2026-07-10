@@ -214,7 +214,8 @@ export const rawPrograms = [
     "cat": "web",
     "status": "Public",
     "dot": "#E34C26",
-    "url": "https://charliersa.github.io/Dried-Fish-Brunch/customer.html"
+    "url": "https://charliersa.github.io/Dried-Fish-Brunch/customer.html",
+    "hidden": true
   },
   {
     "name": "小魚乾早餐店 — 顧客端",

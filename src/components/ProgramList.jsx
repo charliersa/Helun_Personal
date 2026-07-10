@@ -40,7 +40,7 @@ export default function ProgramList() {
 
   // Built-in programs + user-added ones (the latter flagged so they get a ✕).
   const allPrograms = [
-    ...rawPrograms,
+    ...rawPrograms.filter((p) => !p.hidden),
     ...custom.map((p) => ({ ...p, _custom: true })),
   ];
 
