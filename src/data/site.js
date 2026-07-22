@@ -103,7 +103,7 @@ export const work = [
     "detail": ""
   },
   {
-    "period": "2019.06 — 現在",
+    "period": "2026.06 — 現在",
     "role": "AI 應用整合規劃人員",
     "org": "小赫繪圖設計工作室",
     "loc": "台南市",
